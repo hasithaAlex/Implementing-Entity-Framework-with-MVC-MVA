@@ -13,13 +13,4 @@ namespace WebApplication01.Models
         public string Title { get; set; }
         public decimal Price { get; set; }
     }
-
-    public class MusixContext : DbContext
-    {
-        public MusixContext()
-        {
-            Database.Log = s => Debug.WriteLine(s);
-        }
-        public DbSet<Albam> Albams { get; set; }
-    }
 }
