@@ -1,0 +1,39 @@
+﻿@model IEnumerable<_02_MVA_Ex.Models.OneTowMany.Albam_OneTowMany>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Albam_OneTowManyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Albam_OneTowManyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Albam_OneTowManyID })
+        </td>
+    </tr>
+}
+
+</table>

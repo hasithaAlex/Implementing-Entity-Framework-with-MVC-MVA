@@ -29,5 +29,7 @@ namespace _02_MVA_Ex.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<_02_MVA_Ex.Models.OneToOne.Artist> Artists { get; set; }
     }
 }

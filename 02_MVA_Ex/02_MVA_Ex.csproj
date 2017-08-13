@@ -196,14 +196,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Albam_OneTowManyController.cs" />
+    <Compile Include="Controllers\Artist_OneTowManyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OneToOne_ArtistDetailsController.cs" />
+    <Compile Include="Controllers\OneToOne_ArtistsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708130647351_artistandArDetails.cs" />
+    <Compile Include="Migrations\201708130647351_artistandArDetails.Designer.cs">
+      <DependentUpon>201708130647351_artistandArDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708130745112_tblModification.cs" />
+    <Compile Include="Migrations\201708130745112_tblModification.Designer.cs">
+      <DependentUpon>201708130745112_tblModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OneToOne\Artist.cs" />
+    <Compile Include="Models\OneToOne\ArtistDetails.cs" />
+    <Compile Include="Models\DbContext\MusicStoreDataContext.cs" />
+    <Compile Include="Models\OneTowMany\Albam.cs" />
+    <Compile Include="Models\OneTowMany\Artist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -263,10 +281,29 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\OneToOne_Artists\Create.cshtml" />
+    <Content Include="Views\OneToOne_Artists\Delete.cshtml" />
+    <Content Include="Views\OneToOne_Artists\Details.cshtml" />
+    <Content Include="Views\OneToOne_Artists\Edit.cshtml" />
+    <Content Include="Views\OneToOne_Artists\Index.cshtml" />
+    <Content Include="Views\OneToOne_ArtistDetails\Create.cshtml" />
+    <Content Include="Views\OneToOne_ArtistDetails\Delete.cshtml" />
+    <Content Include="Views\OneToOne_ArtistDetails\Details.cshtml" />
+    <Content Include="Views\OneToOne_ArtistDetails\Edit.cshtml" />
+    <Content Include="Views\OneToOne_ArtistDetails\Index.cshtml" />
+    <Content Include="Views\Artist_OneTowMany\Create.cshtml" />
+    <Content Include="Views\Artist_OneTowMany\Delete.cshtml" />
+    <Content Include="Views\Artist_OneTowMany\Details.cshtml" />
+    <Content Include="Views\Artist_OneTowMany\Edit.cshtml" />
+    <Content Include="Views\Artist_OneTowMany\Index.cshtml" />
+    <Content Include="Views\Albam_OneTowMany\Create.cshtml" />
+    <Content Include="Views\Albam_OneTowMany\Delete.cshtml" />
+    <Content Include="Views\Albam_OneTowMany\Details.cshtml" />
+    <Content Include="Views\Albam_OneTowMany\Edit.cshtml" />
+    <Content Include="Views\Albam_OneTowMany\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\OneToOne\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -275,6 +312,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708130647351_artistandArDetails.resx">
+      <DependentUpon>201708130647351_artistandArDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708130745112_tblModification.resx">
+      <DependentUpon>201708130745112_tblModification.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
