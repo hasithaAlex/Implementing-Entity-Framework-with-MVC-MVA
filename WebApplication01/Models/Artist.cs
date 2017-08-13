@@ -15,5 +15,7 @@ namespace WebApplication01.Models
         [Required]
         [StringLength(100,MinimumLength =2)]
         public string Name { get; set; }
+
+        public virtual List<Albam> Albams { get; set; }
     }
 }

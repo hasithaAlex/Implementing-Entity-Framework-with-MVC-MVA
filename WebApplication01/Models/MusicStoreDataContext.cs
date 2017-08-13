@@ -9,5 +9,6 @@ namespace WebApplication01.Models
     public class MusicStoreDataContext : DbContext
     {
         public DbSet<Artist> Artists { get; set; }
+        public DbSet<Albam> Albams { get; set; }
     }
 }
